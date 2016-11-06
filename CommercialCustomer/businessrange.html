@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title:{
+                            text: "Customers Daily Expenses Range"
+                        },
+                        animationEnabled: true,
+
+                        axisY: {
+                            interlacedColor: "#F5F5F5",
+                            gridColor: "#FFFFFF",
+                            tickColor: "#D7D7D7"
+                        },
+                        theme: "theme2",
+                        data: [
+                            {
+                                type: "pie",
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontSize: 15,
+                                indexLabel: "#percent%",
+                                startAngle:-20,
+                                indexLabelPlacement: "inside",
+                                indexLabelFontColor: "MistyRose",
+                                indexLabelLineColor: "darkgrey",
+                                toolTipContent:"{label}$ {y}%",
+                                showInLegend: true,
+                                dataPoints: [
+                                    {  y: 41,  name: "$0-20" },
+                                    {  y: 10,  name: "$20-40" },
+                                    {  y: 21,  name: "$40-60" },
+                                    {  y: 20,  name: "$60-80"},
+                                    {  y: 5,   name: "$80-100"},
+                                    {  y: 3,   name: "$100+"}
+                                ]
+                            }
+                        ]
+                    });
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs-1.9.2/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 50%;"></div>
+</body>
+
+
+</html>

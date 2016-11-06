@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Basic HTML5 Column Chart </title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title:{
+                            text: "Weekly sales"
+                        },
+                        animationEnabled: true,
+                        axisY: {
+                            valueFormatString: "#0",
+                            interlacedColor: "#F5F5F5",
+                            gridColor: "#FFFFFF",
+                            tickColor: "#D7D7D7"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center"
+                        },
+                        theme: "theme2",
+                        data: [
+
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerColor: "grey",
+                                legendText: " ",
+                                dataPoints: [
+                                    {y: 231, label: "Bakery"},
+                                    {y: 102,  label: "Breakfast" },
+                                    {y: 89,  label: "Meals"},
+                                    {y: 312,  label: "Salads"},
+                                    {y: 210,  label: "Beverage" }
+                                ]
+                            }
+                        ]
+                    });
+
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs-1.9.2/canvasjs.min.js"></script></head>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 50%;">
+</div>
+</body>
+</html>

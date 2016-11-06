@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title:{
+                            text: "Category Analysis"
+                        },
+                        animationEnabled: true,
+
+                        axisY: {
+                            interlacedColor: "#F5F5F5",
+                            gridColor: "#FFFFFF",
+                            tickColor: "#D7D7D7"
+                        },
+                        theme: "theme2",
+                        data: [
+                            {
+                                type: "pie",
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontSize: 20,
+                                indexLabel: "{label} {y}%",
+                                startAngle:-20,
+                                toolTipContent:"{label} {y}%",
+                                dataPoints: [
+                                    {  y: 9, label: "Online" },
+                                    {  y: 23,  label: "Restaurants" },
+                                    {  y: 23,  label: "Groceries" },
+                                    {  y: 18,   label: "Bills"},
+                                    {  y: 23,   label: "Coffee"},
+                                    {  y: 4,   label: "Others"}
+                                ]
+                            }
+                        ]
+                    });
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs-1.9.2/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 50%;"></div>
+</body>
+
+
+</html>

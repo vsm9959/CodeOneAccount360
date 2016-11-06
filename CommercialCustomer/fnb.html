@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var frameContext;
+function start(){
+	frameContext        = document.getElementById("displayArea");
+	frameContext.width  = window.innerWidth*0.75;
+	frameContext.height = window.innerHeight*0.65;
+	displayChange(1);
+}
+function display(){
+	frameContext.src= document.getElementById("displayArea").href;
+}
+function displayChange(id){
+	switch(id){
+	case 1:
+		frameContext.src = "Accountdetails.html";
+		break;
+	case 2:
+		frameContext.src = "Transactions.html";
+		break;
+	case 3:
+		frameContext.src = "ImportantDays.html";
+		break;
+	case 4:
+		frameContext.src = "PreviousRecords.html";
+		break;
+	case 5:
+		frameContext.src = "createdeal.html";
+		break;
+	case 6:
+		frameContext.src = "form-validation.html";
+		break;
+		
+	
+	}
+}
+function changeActive(id){
+	var activeButton = document.getElementById(id);
+	/* activeButton. = "#FFFFFF"; */
+}
+</script>
+
+    <title>First National Bank</title>
+
+    <meta name="author" content="your name" />
+    <meta name="description" content="" />
+
+    <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+<body onload = "start();">
+
+<!-- webpage content goes here in the body -->
+
+<div id="page">
+<ul class="tempul">
+<div id="logo">
+        <img src="https://www.firstnational.com/config/img/logo.png" alt="some_text" style="width:100;height:100;" style="text-align: left;"\>
+        <h1><a href="/" id="logoLink"></a></h1>
+    </div>
+            <li class="templi"><a href="#" style=" padding-right: 10px;" class="temp">Services</a></li>
+            <li class="templi"><a href="#" style=" padding-right: 10px;" class="temp">Contact Us</a></li>
+            <li class="templi"><a href="#" style=" padding-right: 10px;" class="temp">About Us</a></li>
+            <li class="templi"><a href="#"  style=" padding-right: 10px;"
+                     class="temp">Home</a></li>
+    </ul>        
+            </div>
+    
+<div  id="nav"><ul>
+            <li id ="b1" onclick = displayChange(6);changeActive(this.id); 
+style ="text-align:center;
+    color: #ffffff;
+    width:80px; height:15px;
+    font-weight: bold;">Credit Card</li>
+            
+        </ul>
+     </div> 
+
+    <div id="content">
+        
+        	<div id="c1">
+            <li class="button" id ="b1" onclick = displayChange(1);changeActive(this.id);>Account Details  </li>
+            <li class="button" id ="b2" onclick = displayChange(2);changeActive(this.id);>Transaction      </li>
+            <li class="button" id ="b3" onclick = displayChange(3);changeActive(this.id);>Important Days   </li>
+            <li class="button" id ="b4" onclick = displayChange(4);changeActive(this.id);>Reports </li>
+            <li class="button" id ="b5" onclick = displayChange(5);changeActive(this.id);>Deals</li>
+            </div>
+       
+     
+        <div id="c2">
+        <br>
+        <iframe id ="displayArea" ></iframe>
+       </div>
+    </div>
+    <div id="footer">
+    
+    </div>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Card checker</title>
+
+    <link rel="stylesheet" href="assets/demo.css">
+    <link rel="stylesheet" href="assets/form-validation.css">
+    <script src = "profit.js"></script>
+
+</head>
+<body>
+
+<div class="main-content">
+
+
+    <div class="form-validation" >
+
+        <div class="form-title-row">
+            <h1>Estimate your profit</h1>
+        </div>
+
+        <div class="form-row form-input-email-row">
+
+
+
+
+            <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+            <span class="form-invalid-data-info"></span>
+
+        </div>
+
+        <div class="form-row">
+            <label>
+                <span>Your offer is for:</span>
+                <select name="dropdown" onchange="checkIfBusiness();" >
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option>All</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>
+                <span>Offer Details:</span>
+                <select name="dropdown" onchange="checkIfBusiness();" >
+                    <option>5%</option>
+                    <option>10%</option>
+                    <option>15%</option>
+                    <option>25%</option>
+                    <option>40%</option>
+                    <option>50%</option>
+                    <option>Buy One Get One</option>
+                    <option>Buy One Get Two</option>
+                    <option>Buy Two Get One</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>
+                <span>Which item does the offer contains</span>
+                <select name="dropdown" onchange="checkIfBusiness();" >
+                    <option>Only Beverages</option>
+                    <option>Only Appetizers</option>
+                    <option>Only Main Course</option>
+                    <option>Beverages and Appetizers</option>
+                    <option>Appetizers and Main Course</option>
+                    <option>All</option>
+                </select>
+            </label>
+        </div>
+
+
+
+        <div class="form-row">
+
+            <button  onclick= "showMyCard();">Simulate</button>
+
+        </div>
+
+        <div class="form-row" id="results">
+        </div>
+
+    </div>
+
+</div>
+</body>
+
+</html>

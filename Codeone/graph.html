@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        theme: "theme2",
+                        title:{
+                            text: "Monthly Expenses"
+                        },
+                        animationEnabled: true,
+                        axisX: {
+                            valueFormatString: "MMM",
+                            interval:1,
+                            intervalType: "month"
+
+                        },
+                        axisY:{
+                            includeZero: false,
+                            valueFormatString: "#0$",
+                            interlacedColor: "#F5F5F5",
+                            gridColor: "#FFFFFF",
+                            tickColor: "#D7D7D7"
+                        },
+                        data: [
+                            {
+                                type: "line",
+                                color: "#006633",
+                                //lineThickness: 3,
+                                dataPoints: [
+                                    { x: new Date(2012, 00, 1), y: 246 },
+                                    { x: new Date(2012, 01, 1), y: 846},
+                                    { x: new Date(2012, 02, 1), y: 468},
+                                    { x: new Date(2012, 03, 1), y: 578 },
+                                    { x: new Date(2012, 04, 1), y: 358 },
+                                    { x: new Date(2012, 05, 1), y: 476 },
+                                    { x: new Date(2012, 06, 1), y: 510 },
+                                    { x: new Date(2012, 07, 1), y: 1068, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+                                    { x: new Date(2012, 08, 1), y: 650 },
+                                    { x: new Date(2012, 09, 1), y: 500 },
+                                    { x: new Date(2012, 10, 1), y: 375 },
+                                    { x: new Date(2012, 11, 1), y: 672 },
+                                    { x: new Date(2012, 12, 1), y: 222 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"}
+                                ]
+                            }
+
+
+                        ]
+                    });
+
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs-1.9.2/canvasjs.min.js"></script></head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 70%;">
+</div>
+</body>
+
+</html>

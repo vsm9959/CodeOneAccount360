@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Card checker</title>
+
+	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="form-validation.css">
+    <script src = "form.js"></script>
+
+</head>
+<body>
+
+    <div class="main-content">
+
+
+        <div class="form-validation" >
+
+            <div class="form-title-row">
+                <h1>Find best card for your needs</h1>
+            </div>
+
+            <div class="form-row form-input-email-row">
+
+
+
+
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Purpose:</span>
+                    <select name="dropdown" onchange="checkIfBusiness();" >
+                        <option></option>
+                        <option>Personal</option>
+                        <option id ="business">Business</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row" id="select1">
+            </div>
+
+            <div class="form-row" id="select2">
+            </div>
+
+            <div class="form-row" id="select3">
+            </div>
+
+            <div class="form-row" id="select4">
+            </div>
+
+            <div class="form-row" id = "pl1">
+
+                <label>
+
+                    <span>Expectations:</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option id = "cback">Cashback</option>
+                        <option>Offers</option>
+                        <option>Travel or Merchandise</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl2">
+
+                <label>
+                    <span>Card Type</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option>Visa</option>
+                        <option id="aexpress">American Express</option>
+                        <option>First Bank</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl3">
+
+                <label>
+                    <span>Intro APR Offers</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl4">
+
+                <label>
+                    <span>Your Credit Score</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option id ="cs1">No Credit History</option>
+                        <option id = "cs2">0-620</option>
+                        <option>621-700</option>
+                        <option>701-760</option>
+                        <option>761+</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl5">
+
+                <label>
+                    <span>Your own credit limit upto 5000$</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl6">
+
+                <label>
+                    <span>Your main usage</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option>Shopping</option>
+                        <option>Restaurants</option>
+                        <option>Shopping</option>
+                        <option>Restaurants</option>
+                        <option>Online</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl7">
+
+                <label>
+                    <span>Expected Monthly Usage</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option>0-500</option>
+                        <option>500-1500</option>
+                        <option>1500-2500</option>
+                        <option>2500-5000</option>
+                        <option>5000+</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row" id = "pl8">
+
+                <label>
+                    <span>Is Balance Transfer a priority</span>
+                    <select name="dropdown" >
+                        <option></option>
+                        <option id= "btyes">Yes</option>
+                        <option>No</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form-row">
+
+                <button  onclick= "showMyCard();">Show My Card</button>
+
+            </div>
+
+            <div class="form-row" id="results">
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+var frameContextGraph;
+function start(){
+	frameContextGraph        = document.getElementById("vinod");
+	frameContextGraph.width  = window.innerWidth*0.9
+	frameContextGraph.height = window.innerHeight*0.9;
+	displayChangeGraphs(1);
+}
+function display(){
+	frameContextGraph.src= document.getElementById("vinod").href;
+}
+function displayChangeGraphs(id){
+	switch(id){
+	case 1:
+		frameContextGraph.src = "businessrange.html";
+		break;
+	case 2:
+		frameContextGraph.src = "itemfrequency.html";
+		break;
+	/* case 3:
+		frameContextGraph.src = "transactionrange.html";
+		break;
+	case 4:
+		frameContextGraph.src = "categoryanalysis.html";
+		break;
+	case 5:
+		frameContextGraph.src = ""
+		break; */
+	
+	}
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="style.css" type="text/css" />
+<title>Insert title here</title>
+</head>
+<body onload = "start();">
+	 	
+	<ul class="pagination">
+	<br><br>
+  <li class="button"  onclick = displayChangeGraphs(1);>Business Range</li>
+   <li class="button"  onclick = displayChangeGraphs(2);>Item Frequency</li> 
+  <!-- <li class="button" onclick = displayChangeGraphs(2);>End Balance Simulation</li>
+  <li class="button" onclick = displayChangeGraphs(3);>Transaction Range</li>
+  <li class="button" onclick = displayChangeGraphs(4);>Category Analysis</li>	 -->
+</ul>
+<br><br><br>
+              <iframe id = "vinod" src =""></iframe>
+	
+</body>
+</html>
